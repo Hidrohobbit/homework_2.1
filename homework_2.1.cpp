@@ -65,24 +65,24 @@ int main()
         }
 
         fout << file_in_array[0];
+
+        fin.close();
+        fout.close();
+
+        delete[] file_in_array;
+        file_in_array = nullptr;
+        delete[] file_in_array_second;
+        file_in_array_second = nullptr;
         
     }
     else
     {
         std::cout << "\nНе удалось открыть \"in.txt\" ";
+
     }
 
     
-    
 
-
-    fin.close();
-    fout.close();
-
-    delete[] file_in_array;
-    file_in_array = nullptr;
-    delete[] file_in_array_second;
-    file_in_array_second = nullptr;
 
     return 0;
 }
